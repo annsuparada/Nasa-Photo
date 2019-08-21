@@ -1,1 +1,9 @@
-{"name":"create-react-app-functions"}
+
+{
+    "version": 2,
+    "name": "create-react-app-functions",
+    "builds": [{ "src": "create-react-app-functions/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
+    "routes": [
+        { "src": "/(.*)", "dest": "create-react-app-functions/$1" }
+    ]
+ }
