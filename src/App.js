@@ -1,21 +1,14 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
-import './App.css';
+import React from "react";
+import NasaGrid from "./components/NasaGrid"
+import 'semantic-ui-css/semantic.min.css'
+
+import "./App.css";
 
 function App() {
-  const [date, setDate] = useState(null);
-  useEffect(() => {
-    async function getDate() {
-      const res = await fetch('/api/date');
-      const newDate = await res.text();
-      setDate(newDate);
-    }
-    getDate();
-  }, []);
   return (
-    <main>
-     <h1>Hi I am Ann</h1>
-    </main>
+    <div className="App">
+      <NasaGrid />
+    </div>
   );
 }
 
